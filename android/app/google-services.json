@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "827700345511",
+    "project_id": "jewelline-70725",
+    "storage_bucket": "jewelline-70725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827700345511:android:dde238c5e19f076cdcb982",
+        "android_client_info": {
+          "package_name": "com.example.gadgatronics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827700345511-u0ma9ann6ukg5dtt7n6pop3otes4spfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY4yVYH2A_E22saSpHzxW0_9sdeQr1Ulk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827700345511-u0ma9ann6ukg5dtt7n6pop3otes4spfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827700345511:android:8a4aecba312af2d0dcb982",
+        "android_client_info": {
+          "package_name": "com.example.jewellineadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827700345511-u0ma9ann6ukg5dtt7n6pop3otes4spfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY4yVYH2A_E22saSpHzxW0_9sdeQr1Ulk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827700345511-u0ma9ann6ukg5dtt7n6pop3otes4spfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
