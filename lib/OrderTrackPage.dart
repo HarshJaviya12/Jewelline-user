@@ -5,7 +5,11 @@ import 'package:im_stepper/stepper.dart';
 import 'package:jewellin_user/All-MODEL-CLASS/Product_Class.dart';
 
 class OrderTracking extends StatefulWidget {
-  OrderTracking({Key? key,this.productid,this.Status,}) : super(key: key);
+  OrderTracking({
+    Key? key,
+    this.productid,
+    this.Status,
+  }) : super(key: key);
 
   String? productid;
   String? Status;
@@ -15,16 +19,13 @@ class OrderTracking extends StatefulWidget {
 }
 
 class _OrderTrackingState extends State<OrderTracking> {
-
   int? randomnumber = Random().nextInt(1000);
 
   int? ActiveStep = 0;
 
-
   @override
   void initState() {
-
-    switch(widget.Status){
+    switch (widget.Status) {
       case "Order Conformed":
         ActiveStep = 0;
         break;
@@ -61,17 +62,13 @@ class _OrderTrackingState extends State<OrderTracking> {
     ),
   ];
 
-
-
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Center(
+        title: Center(
           child: Text("Track Page"),
         ),
       ),
-
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -81,8 +78,9 @@ class _OrderTrackingState extends State<OrderTracking> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Product Id:-${widget.productid}",
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                  Text(
+                    "Product Id:-${widget.productid}",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Text(
                     'Order #${randomnumber}',
@@ -95,14 +93,12 @@ class _OrderTrackingState extends State<OrderTracking> {
                 ],
               ),
             ),
-
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height/1.6,
-                  width: MediaQuery.of(context).size.width/5,
+                  height: MediaQuery.of(context).size.height / 1.6,
+                  width: MediaQuery.of(context).size.width / 5,
                   child: IconStepper(
                     direction: Axis.vertical,
                     activeStep: ActiveStep!.toInt(),
@@ -128,39 +124,42 @@ class _OrderTrackingState extends State<OrderTracking> {
                     ],
                   ),
                 ),
-
                 Expanded(
                   child: Container(
                     height: 400,
                     child: ListView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                        physics: NeverScrollableScrollPhysics(),
                         itemCount: trackOrderList.length,
-                        itemBuilder: (context,index){
+                        itemBuilder: (context, index) {
                           final item = trackOrderList[index];
                           return Column(
                             children: [
                               Container(
                                 height: 23,
                               ),
-                            ListTile(
-                              title: Text(item.title,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 22),),
-                              subtitle: Text(item.subtitle),
-                            )
+                              ListTile(
+                                title: Text(
+                                  item.title,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                      fontSize: 22),
+                                ),
+                                subtitle: Text(item.subtitle),
+                              )
                             ],
                           );
-                        }
-                    ),
+                        }),
                   ),
                 )
               ],
             ),
-            
             Container(
                 alignment: Alignment.bottomLeft,
-                child: Icon(Icons.home_outlined,size: 50,))
-
-
-
+                child: Icon(
+                  Icons.home_outlined,
+                  size: 50,
+                ))
           ],
         ),
       ),
@@ -171,10 +170,6 @@ class _OrderTrackingState extends State<OrderTracking> {
 class TrackOrderList {
   final String title;
   final String subtitle;
+
   TrackOrderList({required this.title, required this.subtitle});
 }
-
-
-
-
-

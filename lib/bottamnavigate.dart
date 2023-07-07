@@ -21,21 +21,12 @@ class _BottamnavigateState extends State<Bottamnavigate> {
 
   Method ref=Method();
 
-
-  List<Widget>widgetsPage = [
-
-  const homepage(),
-
-  Favorite(),
-
-  const mycart(),
-
-  Account(),
-
-
-
+  List<Widget> widgetsPage = [
+    const homepage(),
+    Favorite(),
+    const mycart(),
+    Account(),
   ];
-
 
   Future<bool> _onWillPop() async {
     return (await showDialog(
