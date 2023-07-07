@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'Main Page for signup',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: AnimatedSplashScreen(
-          splash: Image.asset("asset/user.png"),
+          splash: Image.asset("asset/SplashScreen.png"),
           splashIconSize: 100,
           splashTransition: SplashTransition.slideTransition,
           duration: 3000,
